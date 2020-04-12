@@ -1,7 +1,7 @@
 import Head from 'next/head';
 import React from 'react';
 import WordOfGodCard from '../components/WordOfGodCard';
-
+import '../components/global.scss';
 
 class Home extends React.PureComponent<any, any> {
 
@@ -15,15 +15,13 @@ class Home extends React.PureComponent<any, any> {
         return <div className="container">
             <Head>
                 <title>Create Next App</title>
+                <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
                 <link rel="icon" href="/favicon.ico" />
             </Head>
 
             <main>
-                <div className="container">
-                    <WordOfGodCard />
-                </div>
+                <WordOfGodCard />
             </main>
-
 
         </div>;
     }

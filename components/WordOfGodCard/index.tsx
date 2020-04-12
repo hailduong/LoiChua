@@ -20,7 +20,6 @@ class WordOfGodCard extends React.PureComponent<any, TWordOfGodCardState> {
 
         this._bindMethods();
 
-
     }
 
     private _bindMethods() {
@@ -34,8 +33,8 @@ class WordOfGodCard extends React.PureComponent<any, TWordOfGodCardState> {
         const splits = verses[randomNumber].split('-');
 
         this.setState({
-            verse: splits[0].trim(),
-            author: splits[1].trim()
+            verse: splits[0]?.trim(),
+            author: splits[1]?.trim()
         });
     }
 
@@ -57,18 +56,34 @@ class WordOfGodCard extends React.PureComponent<any, TWordOfGodCardState> {
         this.getRandomVerse();
     }
 
+    getCurrentTime(): string {
+        const date = new Date();
+        const hour = date.getHours();
+        const minute = date.getMinutes();
+        return `${hour}:${minute}`;
+    }
+
     render() {
 
         const {author, verse} = this.state;
+        const currentTime: string = this.getCurrentTime();
+
 
         return (
-            <div className="word-of-god-card row background-container d-flex justify-content-center align-items-center">
-                <div className="col-12" onClick={this.getRandomVerse}>
-                    <div className="text-center word-of-god animated">
-                        <div className="author">{author}</div>
-                        <div className="verse">{verse}</div>
+
+            <div className="page word-of-god-card row background-container d-flex justify-content-center align-items-center"
+                 onClick={this.getRandomVerse}>
+                <div className="col-1" />
+                <div className="col-10">
+                    <div key={author} className="text-center word-of-god">
+                        <div className="verse animated fadeInLeft mb-5">{verse}</div>
+                        <div className="author animated fadeInLeft">{author}</div>
+                    </div>
+                    <div className="current-time text-center">
+                        {currentTime}
                     </div>
                 </div>
+                <div className="col-1" />
             </div>
         );
     }
