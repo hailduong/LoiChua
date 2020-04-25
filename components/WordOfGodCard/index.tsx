@@ -25,7 +25,7 @@ class WordOfGodCard extends React.PureComponent<any, TWordOfGodCardState> {
     getRandomVerse() {
         const verses: string[] = data.verses;
         const numberOfVerses = verses.length;
-        const randomNumber = this.generateRandomNumber(0, numberOfVerses);
+        const randomNumber = this.generateRandomNumber(0, numberOfVerses - 1);
         const splits = verses[randomNumber].split('-');
 
         this.setState({
