@@ -22,10 +22,6 @@ class WordOfGodCard extends React.PureComponent<any, TWordOfGodCardState> {
 
     }
 
-    private _bindMethods() {
-        this.getRandomVerse = this.getRandomVerse.bind(this);
-    }
-
     getRandomVerse() {
         const verses: string[] = data.verses;
         const numberOfVerses = verses.length;
@@ -68,6 +64,7 @@ class WordOfGodCard extends React.PureComponent<any, TWordOfGodCardState> {
         const {author, verse} = this.state;
         const currentTime: string = this.getCurrentTime();
 
+        const splits = verse.split('|');
 
         return (
 
@@ -76,7 +73,8 @@ class WordOfGodCard extends React.PureComponent<any, TWordOfGodCardState> {
                 <div className="col-1" />
                 <div className="col-10">
                     <div key={author} className="text-center word-of-god">
-                        <div className="verse animated fadeInLeft mb-5">{verse}</div>
+                        <div className="verse animated fadeInLeft mb-5">{splits[0]}</div>
+                        <div className="verse animated fadeInLeft mb-5">{splits[1]}</div>
                         <div className="author animated fadeInLeft">{author}</div>
                     </div>
                     <div className="current-time text-center">
@@ -86,6 +84,10 @@ class WordOfGodCard extends React.PureComponent<any, TWordOfGodCardState> {
                 <div className="col-1" />
             </div>
         );
+    }
+
+    private _bindMethods() {
+        this.getRandomVerse = this.getRandomVerse.bind(this);
     }
 
 }
