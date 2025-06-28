@@ -1,4 +1,4 @@
-{
+const data = {
   "verses": [
     "Những gì không thể đối với loài người, thì đều có thể đối với Thiên Chúa | What is impossible with man is possible with God. - Lc 18,27",
     "Đức mến là giềng mối sự trọn lành | And over all these put on love, that is, the bond of perfection. - Cl 3,14",
@@ -13,3 +13,4 @@
     "Bình an của Thiên Chúa vượt lên trên mọi hiểu biết | And the peace of God, which surpasses all understanding, will guard your hearts and your minds in Christ Jesus - Pl 4,7"
   ]
 }
+export default data;

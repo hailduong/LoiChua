@@ -3,25 +3,36 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "dev": "next dev",
-    "build": "next build",
-    "start": "next start"
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test",
+    "eject": "react-scripts eject"
   },
   "dependencies": {
-    "@zeit/next-css": "^1.0.1",
-    "@zeit/next-sass": "^1.0.1",
-    "@zeit/next-source-maps": "^0.0.3",
     "animate.css": "^3.7.2",
-    "bootstrap": "^4.4.1",
-    "next": "9.3.1",
-    "next-offline": "^5.0.0",
-    "node-sass": "^4.13.1",
-    "react": "16.13.1",
-    "react-dom": "16.13.1"
+    "bootstrap": "5.3.7",
+    "node-sass": "9.0.0",
+    "react": "18.3.1",
+    "react-dom": "18.3.1",
+    "react-scripts": "5.0.1",
+    "react-router-dom": "6.18.0"
   },
   "devDependencies": {
-    "@types/node": "^13.9.3",
-    "@types/react": "^16.9.25",
-    "typescript": "^3.8.3"
+    "typescript": "5.8.3",
+    "@types/node": "22.15.34",
+    "@types/react": "18.3.1",
+    "@types/react-dom": "18.3.1"
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
   }
 }

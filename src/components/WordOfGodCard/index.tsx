@@ -1,5 +1,5 @@
 import React from 'react';
-import data from './words-of-god.json';
+import data from './words-of-god';
 import './wordOfGod.scss';
 
 type TWordOfGodCardState = {
@@ -9,7 +9,7 @@ type TWordOfGodCardState = {
 }
 
 class WordOfGodCard extends React.PureComponent<any, TWordOfGodCardState> {
-    constructor(props, context) {
+    constructor(props: any, context: any) {
         super(props, context);
 
         this.state = {
@@ -44,7 +44,7 @@ class WordOfGodCard extends React.PureComponent<any, TWordOfGodCardState> {
         // this.backgroundStyle = {'backgroundImage': `url(${backgroundURL})`};
     }
 
-    generateRandomNumber(min, max): number {
+    generateRandomNumber(min: number, max: number): number {
         return Math.round((Math.random() * (max - min) + min));
     }
 
